@@ -11,8 +11,6 @@ export const HeroScreen = ({ history }) => {
 		return <Redirect to="/" />;
 	}
 
-	console.log(hero);
-
 	const {
 		publisher,
 		superhero,
