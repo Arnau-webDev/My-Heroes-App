@@ -20,7 +20,7 @@ export const HeroCard = ({ hero }) => {
 						<p className="card-text">{alter_ego}</p>
 						<p className="card-text">
 							{alter_ego !== characters && (
-								<p className="card-text">{characters}</p>
+								<span className="card-text">{characters}</span>
 							)}
 						</p>
 

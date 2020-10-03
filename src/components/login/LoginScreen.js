@@ -3,20 +3,17 @@ import { types } from '../../types/types';
 import { AuthContext } from '../../auth/AuthContext';
 
 export const LoginScreen = ({ history }) => {
-	const lastPathVisited = localStorage.getItem("lastPath");
 	const { dispatch } = useContext(AuthContext);
 
 	const handleLogin = () => {
+		const lastPathVisited = localStorage.getItem('lastPath') || '/';
+
 		dispatch({
 			type: types.login,
-			payload: {name: "Arnau", logged: false}
+			payload: { name: 'Arnau', logged: false },
 		});
-		
-		if(!!lastPathVisited) {
-			history.replace(lastPathVisited);
-		} else {
-			history.replace('/');
-		}
+
+		history.replace(lastPathVisited);
 	};
 
 	return (
